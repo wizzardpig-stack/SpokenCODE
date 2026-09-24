@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050608" />
+    <meta
+      name="description"
+      content="SpokenCODE — reality, compiled. A cinematic proof of concept in which readable code creates matter."
+    />
+    <title>SpokenCODE — Reality, compiled.</title>
+  </head>
+  <body>
+    <main class="experience" aria-label="SpokenCODE cinematic experience">
+      <canvas id="reality-canvas" aria-label="A dark world in which an apple is compiled into existence"></canvas>
+      <div class="screen-grain" aria-hidden="true"></div>
+      <div class="edge-vignette" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <div class="wordmark" aria-label="SpokenCODE">
+          <span class="wordmark-mark" aria-hidden="true"></span>
+          <span>SPOKENCODE</span>
+        </div>
+        <div class="topbar-meta">
+          <span class="milestone-label">MILESTONE 01 / APPLE</span>
+          <button id="sound-toggle" class="control-button" type="button" aria-pressed="false">
+            SOUND <span id="sound-state">OFF</span>
+          </button>
+          <button id="replay-button" class="control-button control-button-primary" type="button">
+            REPLAY
+          </button>
+        </div>
+      </header>
+
+      <section class="terminal-panel" aria-label="Compilation terminal">
+        <div class="terminal-heading">
+          <span class="terminal-index">01</span>
+          <span>COMPILER / NARRATOR</span>
+          <span class="terminal-state" id="terminal-state">AWAITING INPUT</span>
+        </div>
+        <div id="terminal-lines" class="terminal-lines" role="log" aria-live="polite" aria-relevant="additions"></div>
+        <div class="terminal-cursor" aria-hidden="true">
+          <span class="prompt-mark">›</span><span class="cursor-block"></span>
+        </div>
+        <p class="terminal-note">Every instruction changes the world.</p>
+      </section>
+
+      <section class="world-readout" aria-label="World state">
+        <div class="readout-label">WORLD STATE</div>
+        <div class="readout-value" id="world-state">VOID / 0.00</div>
+        <div class="readout-line" aria-hidden="true"><span id="readout-progress"></span></div>
+      </section>
+
+      <footer class="bottomline">
+        <span>HUMAN-READABLE / MACHINE-FORGED</span>
+        <span id="sequence-clock">00:00</span>
+      </footer>
+
+      <div id="webgl-fallback" class="fallback" hidden>
+        <strong>THE WORLD COULD NOT INITIALIZE.</strong>
+        <span>WebGL is required to witness this milestone.</span>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
